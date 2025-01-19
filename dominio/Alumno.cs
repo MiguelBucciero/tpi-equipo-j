@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace dominio
 {
     public class Alumno : Persona
@@ -12,6 +13,8 @@ namespace dominio
         public string Altura { get; set; }
         public Planificacion Planificacion { get; set; }
         public List<Carrera> Carreras { get; set; }
+
+        
     }
     
 }

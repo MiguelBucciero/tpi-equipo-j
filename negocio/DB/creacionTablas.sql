@@ -25,7 +25,9 @@ Domicilio varchar(30) not null,
 Altura varchar(4) not null,
 Peso decimal not null,
 Pass varchar(20) not null,
+Email varchar(100)not null
 Constraint PK_ID_ALUMNO primary key(Id)
+
 );
 create table ENTRENADORES (
 Id int IDENTITY(1,1) not null,
@@ -37,7 +39,9 @@ Sexo varchar(10) not null,
 Domicilio varchar(30) not null,
 Pass varchar(20) not null,
 EsAdmin bit not null,
+Email varchar(100)not null,
 constraint PK_ID_ENTRENADOR primary key(Id)
+
 );
 
 Create table PLANIFICACIONES(
