@@ -1,0 +1,3 @@
+﻿Use Master;
+GO
+create database DEPORTE_WEB_DB
