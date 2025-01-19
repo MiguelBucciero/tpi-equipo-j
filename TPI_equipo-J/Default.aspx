@@ -6,16 +6,36 @@
             background-image: url('https://i.ibb.co/Ny4jGXd/running-group2.jpg');
             background-size: cover;
             background-position: center;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; 
+            padding-bottom: 250px; 
+        }
+
+        .fondo2 {
+            background-image: url('https://i.ibb.co/DKTXv4x/running-group.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; 
+            padding-bottom: 100px; 
+        }
+
+        .text-contrast {
             color: white;
             text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-            font: bold;
-            text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
         }
-        .btn {
-            text-shadow: -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;6
+
+        .btn-pesonal {
+            background-color: #FFA500 !important;
+            color: white;
+            text-shadow: -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             font: bold;
             text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-          
         }
     </style>
 </asp:Content>
@@ -24,53 +44,64 @@
     <div class="fondo">
         <div class="container mt-5 text-center">
             <div class="jumbotron jumbotron-bg">
-                <p class="display-7">Somos deporte, somos tecnología, somos comunidad</p>
-                <h1 class="display-4">BIENVENIDO A RUNING CLUB</h1>
-                <p class="display-7">¿Quieres hacer tu primer carrera de 5km o 10km?, ¿Quieres correr una maratón?</p>
-                <p class="display-7">¿Correr una carrera de trail? Sea cual sea tu objetivo, te ayudamos</p>
-                <p class="display-7">a conseguirlo de la mano de los mejores profesionales del deporte.</p>
-                <a class="btn btn-lg" href="Login.aspx" role="button" style="background-color: #FFA500; color: white;">Comienza Ya</a>
+                <p class="display-7 text-contrast">Somos deporte, somos tecnología, somos comunidad</p>
+                <h1 class="display-4 text-contrast">BIENVENIDO A RUNING CLUB</h1>
+                <p class="display-7 text-contrast">¿Quieres hacer tu primer carrera de 5km o 10km?, ¿Quieres correr una maratón?</p>
+                <p class="display-7 text-contrast">¿Correr una carrera de trail? Sea cual sea tu objetivo, te ayudamos</p>
+                <p class="display-7 text-contrast">a conseguirlo de la mano de los mejores profesionales del deporte.</p>
+                <a class="btn btn-pesonal" href="Login.aspx" role="button">Comienza Ya</a>
             </div>
         </div>
     </div>
-    <div class="container mt-5">
-        <h2 class="text-center">¿QUÉ TE OFRECEMOS?</h2>
-        <p class="text-center">En ProAm Training, nos dedicamos a ofrecer una experiencia de entrenamiento integral y personalizada para atletas de todos los niveles. Descubre lo que nos diferencia y cómo podemos ayudarte a alcanzar tus metas.</p>
-    </div>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Asesoramiento Experto</h5>
-                        <p class="card-text">Nuestros entrenadores te guiarán durante nuestras clases grupales y planes de entrenamiento personal. Con programas personalizados y apoyo continuo, alcanzarás tus objetivos de manera eficiente y efectiva. Ya seas triatleta, nadador, corredor o ciclista, siempre recibirás la mejor orientación.</p>
-                        <a href="#" class="btn" style="background-color: #FFA500; color: white;">Ver detalle</a>
+    <div class="fondo2">
+        <div class="container mt-5">
+            <h2 class="text-center text-contrast">¿QUÉ TE OFRECEMOS?</h2>
+            <p class="text-center text-contrast">En ProAm Training, nos dedicamos a ofrecer una experiencia de entrenamiento integral y personalizada para atletas de todos los niveles. Descubre lo que nos diferencia y cómo podemos ayudarte a alcanzar tus metas.</p>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Asesoramiento Experto</h5>
+                                <p class="card-text">Nuestros entrenadores te guiarán durante nuestras clases grupales y planes de entrenamiento personal. Con programas personalizados y apoyo continuo, alcanzarás tus objetivos de manera eficiente y efectiva. Ya seas corredor de calle o trail, siempre recibirás la mejor orientación.</p>
+                                <a href="#" class="btn btn-pesonal">Ver detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Clases Grupales Diarias</h5>
+                                <p class="card-text">Forma parte de nuestra comunidad fuerte y motivadora. En Club Running ofrecemos clases grupales que no solo mejoran tus habilidades, sino que también crean un sentido de camaradería y motivación. Entrena junto a atletas con ideas afines y saca lo mejor de ti.</p>
+                                <a href="#" class="btn btn-pesonal">Horarios y Ubicaciones</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Clases Grupales Diarias</h5>
-                        <p class="card-text">Forma parte de nuestra comunidad fuerte y motivadora. En Pro Am Training ofrecemos clases grupales que no solo mejoran tus habilidades, sino que también crean un sentido de camaradería y motivación. Entrena junto a atletas con ideas afines y saca lo mejor de ti.</p>
-                        <a href="#" class="btn" style="background-color: #FFA500; color: white;">Horarios y Ubicaciones</a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Planes de Entrenamiento</h5>
+                                <p class="card-text">Ya sea que quieras mejorar tu resistencia, fuerza o movilidad, ofrecemos tanto planes de entrenamiento estandarizados como personalizados. Cada plan está diseñado para satisfacer tus necesidades específicas y optimizar tu rendimiento.</p>
+                                <a href="#" class="btn btn-pesonal">Ver planes disponibles</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Entrenamiento a distancia</h5>
+                                <p class="card-text">Si quieres entrenar pero estas muy lejos de nuestros puntos de encuentro podes optar por nuestros planes a distancia personalizados a tus necesidades con asesoramiento directo con un entrenador a traves de la plataforma.</p>
+                                <a href="#" class="btn btn-pesonal">Ver planes a distancia</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Planes de Entrenamiento</h5>
-                        <p class="card-text">Ya sea que quieras mejorar tu resistencia, fuerza o movilidad, ofrecemos tanto planes de entrenamiento estandarizados como personalizados. Cada plan está diseñado para satisfacer tus necesidades específicas y optimizar tu rendimiento.</p>
-                        <a href="#" class="btn" style="background-color: #FFA500; color: white;">Ver planes disponibles</a>
-                    </div>
-                </div>
-            </div>
+    </div>
 
-        </div>
-    </div>
 
     <!-- Sección de Contacto -->
     <div class="container mt-5">
@@ -97,7 +128,7 @@
                 <input type="checkbox" class="form-check-input" id="politica">
                 <label class="form-check-label" for="politica">Acepto la política de privacidad y protección de datos</label>
             </div>
-            <button type="submit" class="btn" style="background-color: #FFA500; color: white;">Contactar</button>
+            <button type="submit" class="btn btn-pesonal">Contactar</button>
         </div>
         <div class="mt-3 text-center">
             <p>Para más información, también puedes llamarnos:</p>
