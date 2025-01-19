@@ -1,5 +1,13 @@
-use DEPORTE_WEB_DB;
+IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'DEPORTE_WEB_DB')
+BEGIN
+    CREATE DATABASE DEPORTE_WEB_DB;
+END
 GO
+
+
+USE DEPORTE_WEB_DB;
+GO
+
 create table TIPO_ENTRENAMIENTO(
 Id int IDENTITY(1,1) not null,
 Tipo varchar(1000) not null,
@@ -25,7 +33,7 @@ Domicilio varchar(30) not null,
 Altura varchar(4) not null,
 Peso decimal not null,
 Pass varchar(20) not null,
-Email varchar(100)not null
+Email varchar(100)not null,
 Constraint PK_ID_ALUMNO primary key(Id)
 
 );
