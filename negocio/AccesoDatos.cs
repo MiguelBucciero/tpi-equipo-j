@@ -19,7 +19,7 @@ namespace negocio
         }
         public AccesoDatos() 
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=PROMOS_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=DEPORTE_WEB_DB; integrated security=true");
             comando = new SqlCommand();
         }
         public void setearConsulta(string consulta)
