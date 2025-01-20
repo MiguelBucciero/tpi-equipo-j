@@ -70,6 +70,8 @@
     <Content Include="MenuAdmin.aspx" />
     <Content Include="MenuEntrenador.aspx" />
     <Content Include="MenuUsuario.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="RegistroPaso2.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +125,20 @@
       <DependentUpon>MenuUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPaso2.aspx.cs">
+      <DependentUpon>RegistroPaso2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPaso2.aspx.designer.cs">
+      <DependentUpon>RegistroPaso2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage.Master" />

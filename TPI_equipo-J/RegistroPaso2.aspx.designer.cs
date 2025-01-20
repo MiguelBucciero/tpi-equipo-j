@@ -11,35 +11,26 @@ namespace TPI_equipo_J
 {
 
 
-    public partial class Login
+    public partial class RegistroPaso2
     {
 
         /// <summary>
-        /// Control loginPanel.
+        /// Control validatePanel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel loginPanel;
+        protected global::System.Web.UI.WebControls.Panel validatePanel;
 
         /// <summary>
-        /// Control txtUser.
+        /// Control txtCodigo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUser;
-
-        /// <summary>
-        /// Control txtPass.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPass;
+        protected global::System.Web.UI.WebControls.TextBox txtCodigo;
 
         /// <summary>
         /// Control lblError.
@@ -51,30 +42,57 @@ namespace TPI_equipo_J
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
-        /// Control btnIngresar.
+        /// Control btnValidar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIngresar;
+        protected global::System.Web.UI.WebControls.Button btnValidar;
 
         /// <summary>
-        /// Control btnRegistrar.
+        /// Control passwordPanel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnRegistrar;
+        protected global::System.Web.UI.WebControls.Panel passwordPanel;
 
         /// <summary>
-        /// Control recoverButton.
+        /// Control txtPass1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton recoverButton;
+        protected global::System.Web.UI.WebControls.TextBox txtPass1;
+
+        /// <summary>
+        /// Control txtPass2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPass2;
+
+        /// <summary>
+        /// Control lblPassError.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPassError;
+
+        /// <summary>
+        /// Control btnActivar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActivar;
     }
 }
