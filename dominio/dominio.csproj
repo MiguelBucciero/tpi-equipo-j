@@ -54,6 +54,7 @@
     <Compile Include="FotoPerfil.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Planificacion.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

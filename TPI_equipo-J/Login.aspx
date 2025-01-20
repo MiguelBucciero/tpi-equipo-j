@@ -3,24 +3,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .fondo {
-            background-image: url('https://i.ibb.co/Cw7ybRw/running-fondo.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('https://i.ibb.co/Cw7ybRw/running-fondo.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 93%;
+            height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
-            padding-bottom: 250px;
+            align-items: center;
         }
 
         .text-light {
             color: white !important;
-            font: bold;
+            font-weight: bold;
         }
 
         .btn {
-            font: bold;
+            font-weight: bold;
             text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
         }
 
@@ -48,25 +47,24 @@
                     <asp:Panel ID="loginPanel" runat="server">
                         <div class="form-group">
                             <label for="username">Usuario</label>
-                            <asp:TextBox ID="username" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
+                            <asp:TextBox ID="txtUser" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>
-                            <asp:TextBox ID="password" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                            <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                        </div>
+                        <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
+                        <div class="form-group text-center">
+                            <br />
+                            <asp:Button ID="btnIngresar" OnClick="btnIngresar_Click" runat="server" Class="btn" Style="background-color: #FFA500; color: white;" Text="Iniciar Sesión" />
                         </div>
                         <div class="form-group text-center">
                             <br />
-                            <asp:Button ID="loginButton" runat="server" class="btn" Style="background-color: #FFA500; color: white;" Text="Iniciar Sesión" />
-                        </div>
-                        <div class="form-group text-center">
-                            <br />
-                            <p>
-                                ¿No eres usuario?
-                        <asp:LinkButton ID="registerButton" runat="server" CssClass="btn btn-link text-warning">Regístrate aquí</asp:LinkButton>
+                            <p>¿No eres usuario?
+                                <asp:LinkButton ID="registerButton" runat="server" CssClass="btn btn-link text-warning">Regístrate aquí</asp:LinkButton>
                             </p>
-                            <p>
-                                ¿No recuerdas la contraseña?
-                        <asp:LinkButton ID="recoverButton" runat="server" CssClass="btn btn-link text-warning">Recuperar</asp:LinkButton>
+                            <p>¿No recuerdas la contraseña?
+                                <asp:LinkButton ID="recoverButton" runat="server" CssClass="btn btn-link text-warning">Recuperar</asp:LinkButton>
                             </p>
                         </div>
                     </asp:Panel>

@@ -3,25 +3,33 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .fondo {
-            background-image: url('https://i.ibb.co/Ny4jGXd/running-group2.jpg');
+            background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('https://i.ibb.co/Ny4jGXd/running-group2.jpg');
             background-size: cover;
             background-position: center;
-            height: 90%;
+            height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-end; 
-            padding-bottom: 250px; 
+            align-items: center;
         }
 
         .fondo2 {
-            background-image: url('https://i.ibb.co/DKTXv4x/running-group.jpg');
+            background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('https://i.ibb.co/DKTXv4x/running-group.jpg');
             background-size: cover;
             background-position: center;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-end; 
-            padding-bottom: 100px; 
+            align-items: center;
+        }
+
+        .fondo3 {
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .text-contrast {
@@ -33,14 +41,13 @@
         .btn-pesonal {
             background-color: #FFA500 !important;
             color: white;
-            text-shadow: -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             font: bold;
-            text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <!-- Inicio -->
     <div class="fondo">
         <div class="container mt-5 text-center">
             <div class="jumbotron jumbotron-bg">
@@ -53,6 +60,7 @@
             </div>
         </div>
     </div>
+    <!-- Sección Que te ofrecemos -->
     <div class="fondo2">
         <div class="container mt-5">
             <h2 class="text-center text-contrast">¿QUÉ TE OFRECEMOS?</h2>
@@ -101,50 +109,48 @@
             </div>
         </div>
     </div>
-
-
     <!-- Sección de Contacto -->
-    <div class="container mt-5">
-        <h2 class="text-center">Contacto</h2>
-        <p class="text-center">Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
-        <div class="contact-form mx-auto" style="max-width: 900px;">
-            <div class="form-group">
-                <label for="nombre">Nombre y Apellidos*</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre y apellidos" required>
+    <div class="fondo3">
+        <div class="container mt-5">
+            <h2 class="text-center">Contacto</h2>
+            <p class="text-center">Si tienes alguna pregunta o deseas más información, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+            <div class="contact-form mx-auto" style="max-width: 900px;">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellidos*</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Introduce tu nombre y apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" class="form-control" id="email" placeholder="Introduce tu email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono*</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Introduce tu teléfono" required>
+                </div>
+                <div class="form-group">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea class="form-control" id="comentarios" rows="3" placeholder="Introduce tus comentarios"></textarea>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="politica">
+                    <label class="form-check-label" for="politica">Acepto la política de privacidad y protección de datos</label>
+                </div>
+                <button type="submit" class="btn btn-pesonal">Contactar</button>
             </div>
-            <div class="form-group">
-                <label for="email">E-mail*</label>
-                <input type="email" class="form-control" id="email" placeholder="Introduce tu email" required>
+            <div class="mt-3 text-center">
+                <p>Para más información, también puedes llamarnos:</p>
+                <p>11 9999 9999 / 15 9999 9999</p>
+                <p>Horario: Lunes a Viernes, 9:00 AM a 7:00 PM</p>
             </div>
-            <div class="form-group">
-                <label for="telefono">Teléfono*</label>
-                <input type="tel" class="form-control" id="telefono" placeholder="Introduce tu teléfono" required>
-            </div>
-            <div class="form-group">
-                <label for="comentarios">Comentarios</label>
-                <textarea class="form-control" id="comentarios" rows="3" placeholder="Introduce tus comentarios"></textarea>
-            </div>
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="politica">
-                <label class="form-check-label" for="politica">Acepto la política de privacidad y protección de datos</label>
-            </div>
-            <button type="submit" class="btn btn-pesonal">Contactar</button>
-        </div>
-        <div class="mt-3 text-center">
-            <p>Para más información, también puedes llamarnos:</p>
-            <p>11 9999 9999 / 15 9999 9999</p>
-            <p>Horario: Lunes a Viernes, 9:00 AM a 7:00 PM</p>
         </div>
     </div>
 
-
-
     <!-- Pie de página -->
-    <footer class="bg-dark text-light py-4">
+    <footer class="bg-secondary text-light py-4">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-md-3">
-                    <h5 class="text-uppercase">Proam Training</h5>
+                    <h5 class="text-uppercase">Running Club</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-light">Sobre nosotros</a></li>
                         <li><a href="#" class="text-light">Contacto</a></li>
@@ -180,7 +186,5 @@
             </div>
         </div>
     </footer>
-
-
 </asp:Content>
 
