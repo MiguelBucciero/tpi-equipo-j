@@ -46,21 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alumno.cs" />
+    <Compile Include="Atleta.cs" />
     <Compile Include="Carrera.cs" />
-    <Compile Include="Entrenador.cs" />
     <Compile Include="Entrenamiento.cs" />
     <Compile Include="Evento.cs" />
     <Compile Include="FotoPerfil.cs" />
-    <Compile Include="Persona.cs" />
     <Compile Include="Planificacion.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

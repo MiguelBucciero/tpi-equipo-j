@@ -18,23 +18,23 @@ namespace TPI_equipo_J
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Usuario usuario;
-            UsuarioNegocio negocio = new UsuarioNegocio();
+            Atleta atleta;
+            AtletaNegocio negocio = new AtletaNegocio();
             try
             {
-                usuario = new Usuario(txtUser.Text, txtPass.Text);
-                if (negocio.Loguear(usuario))
+                atleta = new Atleta(txtEmail.Text, txtPass.Text);
+                if (negocio.Loguear(atleta))
                 {
-                    Session.Add("usuario", usuario);
-                    if (usuario.tipoUsuario == Usuario.TipoUsuario.NORMAL)
+                    Session.Add("usuario", atleta);
+                    if (atleta.TipoUsuario == TipoUsuario.NORMAL)
                     {
                         Response.Redirect("MenuUsuario.aspx", false);
                     }
-                    else if(usuario.tipoUsuario == Usuario.TipoUsuario.ADMIN)
+                    else if(atleta.TipoUsuario == TipoUsuario.ADMIN)
                     {
                         Response.Redirect("MenuAdmin.aspx", false);
                     }
-                    else if(usuario.tipoUsuario== Usuario.TipoUsuario.ENTRENADOR)
+                    else if(atleta.TipoUsuario== TipoUsuario.ENTRENADOR)
                     {
                         Response.Redirect("MenuEntrenador.aspx", false);
                     }

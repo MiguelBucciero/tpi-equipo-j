@@ -11,7 +11,7 @@ namespace dominio
         public int Id { get; set; }
         public DateTime Inicio { get; set; }
         public DateTime Fin { get; set; }
-        public Entrenador Entrenador { get; set; }
+        //public Entrenador Entrenador { get; set; }
         public List<Entrenamiento> Entrenamientos {  get; set; }
     }
 }

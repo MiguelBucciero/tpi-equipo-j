@@ -47,16 +47,16 @@
                 <div class="card-body">
                     <asp:Panel ID="registerPanel" runat="server">
                         <div class="form-group">
-                            <label for="username">Usuario</label>
-                            <asp:TextBox ID="txtUser" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
+                            <label for="email">Email</label>
+                            <asp:TextBox ID="txEmail" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="password">Contraseña</label>
-                            <asp:TextBox ID="txtPass" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                            <label for="nombre">Nombre</label>
+                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="Ingrese su correo electrónico"></asp:TextBox>
+                            <label for="apellido">Apellido</label>
+                            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
                         </div>
                         <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
                         <div class="form-group text-center mt-3">

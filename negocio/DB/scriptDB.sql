@@ -22,7 +22,7 @@ CREATE TABLE CARRERAS(
     CONSTRAINT PK_ID_CARRERA PRIMARY KEY(Id)
 );
 
-CREATE TABLE ALUMNOS(
+CREATE TABLE ATLETAS(
     Id int IDENTITY(1,1) not null,
     Nombre varchar(50) not null,
     Apellido varchar(50) not null,
@@ -34,21 +34,8 @@ CREATE TABLE ALUMNOS(
     Peso decimal not null,
     Pass varchar(20) not null,
     Email varchar(100) not null,
-    CONSTRAINT PK_ID_ALUMNO PRIMARY KEY(Id)
-);
-
-CREATE TABLE ENTRENADORES(
-    Id int IDENTITY(1,1) not null,
-    Nombre varchar(20) not null,
-    Apellido varchar(20) not null,
-    Dni varchar(10) not null,
-    FechaNacimiento date not null,
-    Sexo varchar(10) not null,
-    Domicilio varchar(30) not null,
-    Pass varchar(20) not null,
-    EsAdmin bit not null,
-    Email varchar(100) not null,
-    CONSTRAINT PK_ID_ENTRENADOR PRIMARY KEY(Id)
+	TipoUser int not null,
+    CONSTRAINT PK_ID_ATLETAS PRIMARY KEY(Id)
 );
 
 CREATE TABLE PLANIFICACIONES(
@@ -57,7 +44,7 @@ CREATE TABLE PLANIFICACIONES(
     FechaFin date not null,
     IdEntrenador int not null,
     CONSTRAINT PK_ID_PLANIFICACION PRIMARY KEY(Id),
-    CONSTRAINT FK_ID_ENTRENADOR FOREIGN KEY(IdEntrenador) REFERENCES ENTRENADORES(Id)
+    CONSTRAINT FK_ID_ENTRENADOR FOREIGN KEY(IdEntrenador) REFERENCES ATLETAS(Id)
 );
 
 CREATE TABLE IMAGENES(
@@ -65,7 +52,7 @@ CREATE TABLE IMAGENES(
     IdAlumno int not null,
     ImagenUrl varchar(1000),
     CONSTRAINT PK_ID_IMAGEN PRIMARY KEY(Id),
-    CONSTRAINT FK_ID_ALUMNO FOREIGN KEY(IdAlumno) REFERENCES ALUMNOS(Id)
+    CONSTRAINT FK_ID_ALUMNO FOREIGN KEY(IdAlumno) REFERENCES ATLETAS(Id)
 );
 
 CREATE TABLE ENTRENAMIENTOS(
@@ -81,16 +68,3 @@ CREATE TABLE ENTRENAMIENTOS(
     CONSTRAINT FK_IdTipo FOREIGN KEY(IdTipo) REFERENCES TIPO_ENTRENAMIENTO(Id)
 );
 
-CREATE TABLE USUARIOS(
-    Id int IDENTITY(1,1) not null,
-    Usuario varchar(50) not null,
-    Pass varchar(50) not null,
-    TipoUser int not null,
-    CONSTRAINT PK_ID_USUARIOS PRIMARY KEY(Id)
-);
-
-INSERT INTO USUARIOS (Usuario, Pass, TipoUser) 
-VALUES 
-('test', 'test', 1), 
-('admin', 'admin', 2), 
-('entrenador', 'entrenador', 3);

@@ -52,7 +52,7 @@
     }
 
     .profile-picture {
-        background: url('https://i.ibb.co/GTVwdZ1/FOTO-DE-PERFIL-300x300.png') no-repeat center center;
+        background: url('https://i.ibb.co/NsG85Cw/perfil-vacio.jpg') no-repeat center center;
         background-size: cover;
         height: 100px;
         width: 100px;
@@ -98,7 +98,7 @@
                     <div class="col-md-4 d-flex">
                         <div class="card card-custom text-center flex-fill">
                             <div class="profile-picture"></div>
-                            <h3 class="mt-3">Miguel Bucciero</h3>
+                            <h3 class="mt-3" id="lblUserName" runat="server">Nombre del Usuario</h3>
                             <p>ENTRENADOR</p>
                             <div><span>0 Following</span> | <span>0 Followers</span> </div>
                         </div>

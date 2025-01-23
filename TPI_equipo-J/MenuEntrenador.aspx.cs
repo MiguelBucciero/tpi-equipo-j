@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,10 +13,16 @@ namespace TPI_equipo_J
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Session["usuario"] != null && ((dominio.Usuario)Session["usuario"]).tipoUsuario == dominio.Usuario.TipoUsuario.ENTRENADOR))
+            if (!IsPostBack)
             {
-                Session.Add("Error", "Debes tener permisos de Entrenador para entrar.");
-                Response.Redirect("Error.aspx", false);
+                if (!(Session["usuario"] != null && ((dominio.Atleta)Session["usuario"]).TipoUsuario == dominio.TipoUsuario.ENTRENADOR))
+                {
+                    Session.Add("Error", "Debes tener permisos de Entrenador para entrar.");
+                    Response.Redirect("Error.aspx", false);
+                }
+                AtletaNegocio negocio = new AtletaNegocio();
+                Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
+                lblUserName.InnerText = atleta.Nombre;
             }
         }
     }

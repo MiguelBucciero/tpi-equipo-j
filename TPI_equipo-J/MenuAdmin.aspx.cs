@@ -11,7 +11,7 @@ namespace TPI_equipo_J
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Session["usuario"] != null && ((dominio.Usuario)Session["usuario"]).tipoUsuario == dominio.Usuario.TipoUsuario.ADMIN))
+            if (!(Session["usuario"] != null && ((dominio.Atleta)Session["usuario"]).TipoUsuario == dominio.TipoUsuario.ADMIN))
             {
                 Session.Add("Error", "Debes tener permisos de Administrador para entrar.");
                 Response.Redirect("Error.aspx", false);

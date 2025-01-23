@@ -10,6 +10,6 @@ namespace dominio
     {
         public int Id {  get; set; }
         public string Url { get; set; }
-        public int IdPersona { get; set; }
+        public int IdAtleta { get; set; }
     }
 }

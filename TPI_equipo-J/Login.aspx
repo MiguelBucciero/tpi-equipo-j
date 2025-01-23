@@ -46,8 +46,8 @@
                 <div class="card-body">
                     <asp:Panel ID="loginPanel" runat="server">
                         <div class="form-group">
-                            <label for="username">Usuario</label>
-                            <asp:TextBox ID="txtUser" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
+                            <label for="username">Email</label>
+                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Ingrese su usuario"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="password">Contraseña</label>

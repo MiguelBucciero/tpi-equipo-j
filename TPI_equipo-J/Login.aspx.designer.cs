@@ -24,13 +24,13 @@ namespace TPI_equipo_J
         protected global::System.Web.UI.WebControls.Panel loginPanel;
 
         /// <summary>
-        /// Control txtUser.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUser;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Control txtPass.
