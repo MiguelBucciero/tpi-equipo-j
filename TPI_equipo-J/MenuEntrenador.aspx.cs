@@ -20,9 +20,12 @@ namespace TPI_equipo_J
                     Session.Add("Error", "Debes tener permisos de Entrenador para entrar.");
                     Response.Redirect("Error.aspx", false);
                 }
-                AtletaNegocio negocio = new AtletaNegocio();
-                Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
-                lblUserName.InnerText = atleta.Nombre;
+                else
+                {
+                    AtletaNegocio negocio = new AtletaNegocio();
+                    Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
+                    lblUserName.InnerText = atleta.Nombre;
+                }
             }
         }
     }

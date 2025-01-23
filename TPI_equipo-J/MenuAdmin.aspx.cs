@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +17,12 @@ namespace TPI_equipo_J
             {
                 Session.Add("Error", "Debes tener permisos de Administrador para entrar.");
                 Response.Redirect("Error.aspx", false);
+            }
+            else
+            {
+                AtletaNegocio negocio = new AtletaNegocio();
+                Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
+                lblUserName.InnerText = atleta.Nombre;
             }
         }
     }

@@ -241,6 +241,7 @@
                     <p>Contenido de planificación y estadísticas.</p>
                     <!-- Contenido de planificación y estadísticas -->
                 </div>
+
             </div>
         </div>
         <div class="tab-pane fade" id="alumnos" role="tabpanel" aria-labelledby="alumnos-tab">
