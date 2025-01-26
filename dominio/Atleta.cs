@@ -36,6 +36,8 @@ namespace dominio
             Email = email;
             Pass = pass;
         }
+
+        public Atleta() { }
     }
 }
     

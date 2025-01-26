@@ -9,6 +9,41 @@ namespace negocio
 {
     public class AtletaNegocio
     {
+        public List<Atleta> listaAtletas()
+        {
+            string consulta = "select Id, Nombre, Apellido, Dni, FechaNacimiento, Sexo, Domicilio, Altura, Peso, Pass, Email, TipoUser from ATLETAS";
+            List<Atleta> listaAtletas = new List<Atleta>();
+            AccesoDatos accesoDatos = new AccesoDatos();
+            try
+            {
+                accesoDatos.setearConsulta(consulta);
+                accesoDatos.ejecutarLectura();
+
+                while (accesoDatos.Lector.Read())
+                {
+                    Atleta atletaAux = new Atleta();
+                    atletaAux.Id = (int)accesoDatos.Lector["Id"];
+                    atletaAux.Nombre = (string)accesoDatos.Lector["Nombre"];
+                    atletaAux.Apellido = (string)accesoDatos.Lector["Apellido"];
+                    atletaAux.Dni = (string)accesoDatos.Lector["Dni"];
+                    atletaAux.FechaNacimiento = (DateTime)accesoDatos.Lector["FechaNacimiento"];
+                    atletaAux.Sexo = (string)accesoDatos.Lector["Sexo"];
+                    atletaAux.Domicilio = (string)accesoDatos.Lector["Domicilio"];
+                    atletaAux.Altura = (string)accesoDatos.Lector["Altura"];
+                    atletaAux.Peso = (decimal)accesoDatos.Lector["Peso"];
+                    atletaAux.Email = (string)accesoDatos.Lector["Email"];
+                    atletaAux.TipoUsuario = (int)(accesoDatos.Lector["TipoUser"]) == 1 ? TipoUsuario.ADMIN : (int)(accesoDatos.Lector["TipoUser"]) == 2 ? TipoUsuario.ENTRENADOR : TipoUsuario.NORMAL;
+
+                    listaAtletas.Add(atletaAux);
+                }
+                return listaAtletas;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
         public bool Loguear(Atleta atleta)
         {
             AccesoDatos datos = new AccesoDatos();

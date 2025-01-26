@@ -13,16 +13,24 @@ namespace TPI_equipo_J
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Session["usuario"] != null && ((dominio.Atleta)Session["usuario"]).TipoUsuario == dominio.TipoUsuario.ADMIN))
+
+            if (!IsPostBack)
             {
-                Session.Add("Error", "Debes tener permisos de Administrador para entrar.");
-                Response.Redirect("Error.aspx", false);
-            }
-            else
-            {
-                AtletaNegocio negocio = new AtletaNegocio();
-                Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
-                lblUserName.InnerText = atleta.Nombre;
+                if (!(Session["usuario"] != null && ((dominio.Atleta)Session["usuario"]).TipoUsuario == dominio.TipoUsuario.ADMIN))
+                {
+                    Session.Add("Error", "Debes tener permisos de Administrador para entrar.");
+                    Response.Redirect("Error.aspx", false);
+                }
+                else
+                {
+                    AtletaNegocio negocio = new AtletaNegocio();
+                    Atleta atleta = negocio.datosAtleta((Atleta)Session["usuario"]);
+                    lblUserName.InnerText = atleta.Nombre;
+
+                    dgvUsuarios.DataSource = (List<Atleta>)Session["Usuarios"];
+                    dgvUsuarios.DataBind();
+                }
+
             }
         }
     }

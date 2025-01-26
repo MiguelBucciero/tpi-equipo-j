@@ -256,6 +256,11 @@
         <div class="tab-pane fade" id="permisos" role="tabpanel" aria-labelledby="permisos-tab">
             <h3>Permisos</h3>
             <p>Adminstracion de Permisos</p>
+
+            <asp:GridView runat="server" ID="dgvUsuarios">
+
+
+            </asp:GridView>
             <!-- Contenido de Permisos a Entrenadores -->
         </div>
     </div>

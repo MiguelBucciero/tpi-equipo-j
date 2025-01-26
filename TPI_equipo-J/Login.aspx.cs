@@ -13,7 +13,14 @@ namespace TPI_equipo_J
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) { 
 
+                AtletaNegocio atletaNegocio = new AtletaNegocio();
+
+                Session["Usuarios"]=atletaNegocio.listaAtletas();
+            
+            
+            }
         }
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
