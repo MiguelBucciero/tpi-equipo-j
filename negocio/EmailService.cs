@@ -22,14 +22,17 @@ namespace negocio
             server.Host = "smtp.gmail.com";
         }
 
-        public void armarCorreo(string emailDestino)
+        public int armarCorreo(string emailDestino, string nombre, string apellido)
         {
             email = new MailMessage();
             email.From = new MailAddress("noresponder@ClubRunning.com");
             email.To.Add(emailDestino);
-            email.Subject = ("Confirmación de registro");
+            email.Subject = ("Bienvenido a la Plataforma de Club Running.");
             email.IsBodyHtml = true;
-            email.Body = "<h1>Para comfirmar el registro debes ingresar el siguente codigo: 123 456 789 </h1>";
+            Random random = new Random();
+            int codigo = random.Next(100000, 999999);
+            email.Body = $"<h1>Hola {nombre} {apellido},</h1><p>Hemos procesado tu registro en la plataforma de ProAm.\r\n\r\nPara poder activar tu cuenta introduce el siguiente código en la pantalla dónde has hecho el registro.\r\n\r\nCódigo: <strong>{codigo}</strong></p>";
+            return codigo;
         }
 
         public void enviarEmail()

@@ -72,6 +72,7 @@
     <Content Include="MenuUsuario.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="RegistroPaso2.aspx" />
+    <Content Include="RegistroPaso3.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,13 @@
     </Compile>
     <Compile Include="RegistroPaso2.aspx.designer.cs">
       <DependentUpon>RegistroPaso2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPaso3.aspx.cs">
+      <DependentUpon>RegistroPaso3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroPaso3.aspx.designer.cs">
+      <DependentUpon>RegistroPaso3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

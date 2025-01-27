@@ -34,6 +34,9 @@ namespace TPI_equipo_J
                     atleta.Nombre = txtNombre.Text;
                     atleta.Apellido = txtApellido.Text;
                     Session.Add("usuario", atleta);
+                    EmailService emailService = new EmailService();
+                    Session.Add("Codigo", emailService.armarCorreo(txtEmail.Text, txtNombre.Text, txtApellido.Text));
+                    emailService.enviarEmail();
                     Response.Redirect("RegistroPaso2.aspx", false);
                 }
             }

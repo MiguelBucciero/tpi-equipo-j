@@ -56,22 +56,23 @@
                         <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
                         <div class="form-group text-center mt-3">
                             <asp:Button ID="btnValidar" runat="server" CssClass="btn btn-custom" Style="background-color: #FFA500; color: white;" Text="Validar Código" OnClick="btnValidar_Click" />
+                             <asp:Label ID="lblMensaje" runat="server" Text="" />
                         </div>
                     </asp:Panel>
-                    <p class="mt-3 text-center"><a href="#" class="text-warning">Volver a enviar</a></p>
+                    <p class="mt-3 text-center"><asp:LinkButton ID="btnVolverEnviar" runat="server" CssClass="text-warning" OnClick="VolverEnviar_Click">Volver a enviar</asp:LinkButton></p>
                     <p class="mt-3">A continuación, puedes especificar tu contraseña</p>
                     <asp:Panel ID="passwordPanel" runat="server">
                         <div class="form-group">
                             <label for="password1">Contraseña</label>
-                            <asp:TextBox ID="txtPass1" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                            <asp:TextBox ID="txtPass1" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña" Enabled="false"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label for="password2">Contraseña</label>
-                            <asp:TextBox ID="txtPass2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Repita su contraseña"></asp:TextBox>
+                            <asp:TextBox ID="txtPass2" runat="server" CssClass="form-control" TextMode="Password" placeholder="Repita su contraseña" Enabled="false"></asp:TextBox>
                         </div>
                         <asp:Label ID="lblPassError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
                         <div class="form-group text-center mt-3">
-                            <asp:Button ID="btnActivar" runat="server" CssClass="btn btn-custom" Style="background-color: #FFA500; color: white;" Text="Activar Cuenta" OnClick="btnActivar_Click" />
+                            <asp:Button ID="btnActivar" runat="server" CssClass="btn btn-custom" Style="background-color: #FFA500; color: white;" Text="Activar Cuenta" OnClick="btnActivar_Click" Enabled="false" />
                         </div>
                     </asp:Panel>
                 </div>

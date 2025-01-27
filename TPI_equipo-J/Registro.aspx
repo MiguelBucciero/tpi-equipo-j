@@ -98,12 +98,12 @@
                         </div>
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
-                            <asp:TextBox ClientIDMode="Static" ID="txtNombre" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                            <asp:TextBox ClientIDMode="Static" ID="txtNombre" runat="server" CssClass="form-control" placeholder="Ingrese su contraseña"></asp:TextBox>
                             <span id="errorNombre" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label for="apellido">Apellido</label>
-                            <asp:TextBox ClientIDMode="Static" ID="txtApellido" runat="server" CssClass="form-control" TextMode="Password" placeholder="Ingrese su contraseña"></asp:TextBox>
+                            <asp:TextBox ClientIDMode="Static" ID="txtApellido" runat="server" CssClass="form-control" placeholder="Ingrese su contraseña"></asp:TextBox>
                             <span id="errorApellido" class="text-danger"></span>
                         </div>
                         <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
