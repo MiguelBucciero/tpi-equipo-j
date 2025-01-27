@@ -72,8 +72,32 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+        public bool ValidadarEmail(Atleta atleta)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Select * from ATLETAS where Email = @email");
+                datos.setearParametro("@email", atleta.Email);
 
-       public Atleta datosAtleta(Atleta atleta)
+                datos.ejecutarLectura();
+                if (datos.Lector.HasRows)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public Atleta datosAtleta(Atleta atleta)
         {
             AccesoDatos datos = new AccesoDatos();
             try
