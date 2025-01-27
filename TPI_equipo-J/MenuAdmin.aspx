@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="MenuAdmin.aspx.cs" Inherits="TPI_equipo_J.MenuAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
+    <!-- <style>
         .content-area {
             padding: 20px;
             max-width: 100%;
@@ -75,6 +75,7 @@
             border-radius: 10px;
         }
     </style>
+        -->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-area">
@@ -257,8 +258,16 @@
             <h3>Permisos</h3>
             <p>Adminstracion de Permisos</p>
 
-            <asp:GridView runat="server" ID="dgvUsuarios">
-
+            <asp:GridView runat="server" ID="dgvUsuarios" AutoGenerateColumns ="false" OnSelectedIndexChanged="dgvUsuarios_SelectedIndexChanged">
+                <Columns>
+                    <asp:BoundField  HeaderText="ID" DataField="Id" HeaderStyle-CssClass="oculto" ItemStyle-CssClass="oculto"/>
+                    <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>
+                    <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
+                    <asp:BoundField  HeaderText="Dni" DataField="Dni"/>                   
+                    <asp:BoundField  HeaderText="Tipo" DataField="TipoUsuario"/>
+                    <asp:CommandField runat="server" SelectText="Seleccionar" HeaderText="Editar" ShowSelectButton="true"/>
+                    
+                </Columns>
 
             </asp:GridView>
             <!-- Contenido de Permisos a Entrenadores -->

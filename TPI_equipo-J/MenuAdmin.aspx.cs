@@ -33,5 +33,10 @@ namespace TPI_equipo_J
 
             }
         }
+
+        protected void dgvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
