@@ -21,6 +21,14 @@ namespace TPI_equipo_J
                     Session.Add("Error", "Debes registrar primero tu Email y Nombre.");
                     Response.Redirect("Error.aspx", false);
                 }
+                else
+                {
+                    Atleta atleta = (Atleta)Session["usuario"];
+                    if (atleta != null)
+                    {
+                        emailCargado.Text = atleta.Email;
+                    }
+                }
             }
         }
         protected void btnValidar_Click(object sender, EventArgs e)

@@ -47,7 +47,7 @@
                     <h3>Registro</h3>
                 </div>
                 <div class="card-body">
-                    <p>Para validar tu correo y activar tu cuenta, introduce el código que te hemos enviado por email a: <strong>miguelbucciero@gmail.com</strong></p>
+                    <p>Para validar tu correo y activar tu cuenta, introduce el código que te hemos enviado por email a: <strong><asp:Literal ID="emailCargado" runat="server" /></strong></p>
                     <asp:Panel ID="validatePanel" runat="server">
                         <div class="form-group">
                             <label for="codigo">Código</label>

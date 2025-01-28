@@ -128,6 +128,34 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-        
+        public void guardarAtleta(Atleta nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO ATLETAS (Nombre, Apellido, Dni, FechaNacimiento, Sexo, Domicilio, Altura, Peso, Pass, Email, TipoUser) VALUES (@Nombre, @Apellido, @Dni, @FechaNacimiento, @Sexo, @Domicilio, @Altura, @Peso, @Pass, @Email, @TipoUser)");
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Apellido", nuevo.Apellido);
+                datos.setearParametro("@Dni", nuevo.Dni);
+                datos.setearParametro("@FechaNacimiento", nuevo.FechaNacimiento);
+                datos.setearParametro("@Sexo", nuevo.Sexo);
+                datos.setearParametro("@Domicilio", nuevo.Domicilio);
+                datos.setearParametro("@Altura", nuevo.Altura);
+                datos.setearParametro("@Peso", nuevo.Peso);
+                datos.setearParametro("@Pass", nuevo.Pass);
+                datos.setearParametro("@Email", nuevo.Email);    
+                datos.setearParametro("@TipoUser", 3);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }
