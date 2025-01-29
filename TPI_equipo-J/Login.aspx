@@ -64,7 +64,7 @@
                                 <asp:LinkButton ID="btnRegistrar" OnClick="btnRegistrar_Click" runat="server" CssClass="btn btn-link text-warning">Regístrate aquí</asp:LinkButton>
                             </p>
                             <p>¿No recuerdas la contraseña?
-                                <asp:LinkButton ID="recoverButton" runat="server" CssClass="btn btn-link text-warning">Recuperar</asp:LinkButton>
+                                <asp:LinkButton ID="recoverButton" runat="server" CssClass="btn btn-link text-warning" OnClick="recoverButton_Click">Recuperar</asp:LinkButton>
                             </p>
                         </div>
                     </asp:Panel>

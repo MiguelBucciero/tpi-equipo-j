@@ -24,10 +24,7 @@ namespace TPI_equipo_J
                 else
                 {
                     Atleta atleta = (Atleta)Session["usuario"];
-                    if (atleta != null)
-                    {
-                        emailCargado.Text = atleta.Email;
-                    }
+                    emailCargado.Text = atleta.Email;
                 }
             }
         }

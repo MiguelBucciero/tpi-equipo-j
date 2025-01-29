@@ -35,7 +35,7 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
     </style>
-    <script type="text/javascript">
+    <script>
     function validar() {
         
         let isValid = true;

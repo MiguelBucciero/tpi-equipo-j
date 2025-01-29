@@ -61,5 +61,10 @@ namespace TPI_equipo_J
         {
             Response.Redirect("Registro.aspx");
         }
+
+        protected void recoverButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RecuperarContraseña.aspx");
+        }
     }
 }

@@ -31,10 +31,21 @@ namespace negocio
             email.IsBodyHtml = true;
             Random random = new Random();
             int codigo = random.Next(100000, 999999);
-            email.Body = $"<h1>Hola {nombre} {apellido},</h1><p>Hemos procesado tu registro en la plataforma de ProAm.\r\n\r\nPara poder activar tu cuenta introduce el siguiente código en la pantalla dónde has hecho el registro.\r\n\r\nCódigo: <strong>{codigo}</strong></p>";
+            email.Body = $"<h1>Hola {nombre} {apellido},</h1><p>Hemos procesado tu registro en la plataforma de Club Running.\r\n\r\nPara poder activar tu cuenta introduce el siguiente código en la pantalla dónde has hecho el registro.\r\n\r\nCódigo: <strong>{codigo}</strong></p>";
             return codigo;
         }
-
+        public int recuperarPass(string emailDestino)
+        {
+            email = new MailMessage();
+            email.From = new MailAddress("noresponder@ClubRunning.com");
+            email.To.Add(emailDestino);
+            email.Subject = ("Recuperación de Contraseña.");
+            email.IsBodyHtml = true;
+            Random random = new Random();
+            int codigo = random.Next(100000, 999999);
+            email.Body = $"<h1>Hola,</h1><p>Para recuperar tu contraseña introduce el siguiente código en la pantalla dónde has solicitado la recuperación.\r\n\r\nCódigo: <strong>{codigo}</strong></p>";
+            return codigo;
+        }
         public void enviarEmail()
         {
 

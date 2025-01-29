@@ -57,7 +57,7 @@ namespace negocio
                 while (datos.Lector.Read())
                 {
                     atleta.Id = (int)datos.Lector["Id"];
-                    atleta.TipoUsuario = (int)(datos.Lector["TipoUser"]) == 1 ? TipoUsuario.ADMIN:(int)(datos.Lector["TipoUser"]) == 2 ? TipoUsuario.ENTRENADOR: TipoUsuario.NORMAL;
+                    atleta.TipoUsuario = (int)(datos.Lector["TipoUser"]) == 1 ? TipoUsuario.ADMIN : (int)(datos.Lector["TipoUser"]) == 2 ? TipoUsuario.ENTRENADOR : TipoUsuario.NORMAL;
                     return true;
                 }
                 return false;
@@ -105,7 +105,7 @@ namespace negocio
                 datos.setearConsulta("Select * from ATLETAS where Id = @id");
                 datos.setearParametro("@id", atleta.Id);
                 datos.ejecutarLectura();
-                
+
                 while (datos.Lector.Read())
                 {
                     atleta.Nombre = (string)datos.Lector["Nombre"];
@@ -143,7 +143,7 @@ namespace negocio
                 datos.setearParametro("@Altura", nuevo.Altura);
                 datos.setearParametro("@Peso", nuevo.Peso);
                 datos.setearParametro("@Pass", nuevo.Pass);
-                datos.setearParametro("@Email", nuevo.Email);    
+                datos.setearParametro("@Email", nuevo.Email);
                 datos.setearParametro("@TipoUser", 3);
                 datos.ejecutarAccion();
             }
@@ -156,6 +156,24 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
-
+        public void actualizarPass(Atleta nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ATLETAS SET Pass = @Pass WHERE Email = @Email");
+                datos.setearParametro("@Pass", nuevo.Pass);
+                datos.setearParametro("@Email", nuevo.Email);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

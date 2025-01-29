@@ -70,6 +70,8 @@
     <Content Include="MenuAdmin.aspx" />
     <Content Include="MenuEntrenador.aspx" />
     <Content Include="MenuUsuario.aspx" />
+    <Content Include="RecuperarContraseña.aspx" />
+    <Content Include="RecuperarContraseñaPaso2.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="RegistroPaso2.aspx" />
     <Content Include="RegistroPaso3.aspx" />
@@ -126,6 +128,20 @@
       <DependentUpon>MenuUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContraseñaPaso2.aspx.cs">
+      <DependentUpon>RecuperarContraseñaPaso2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseñaPaso2.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseñaPaso2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
