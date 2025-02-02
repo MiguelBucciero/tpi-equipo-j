@@ -108,7 +108,6 @@
                         </div>
                         <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false"></asp:Label>
                         <div class="form-group text-center mt-3">
-                            <asp:Button ID="btnRegistrar" runat="server" CssClass="btn btn-custom" Style="background-color: #FFA500; color: white;" Text="Registrarse" OnClientClick="return validar()" OnClick="btnRegistrar_Click" />
                         </div>
                     </asp:Panel>
                 </div>

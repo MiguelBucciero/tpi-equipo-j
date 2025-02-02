@@ -113,9 +113,11 @@ namespace negocio
                     atleta.Dni = (string)datos.Lector["Dni"];
                     atleta.FechaNacimiento = (DateTime)datos.Lector["FechaNacimiento"];
                     atleta.Sexo = (string)datos.Lector["Sexo"];
+                    atleta.Domicilio = (string)datos.Lector["Domicilio"];
                     atleta.Peso = (decimal)datos.Lector["Peso"];
                     atleta.Altura = (string)datos.Lector["Altura"];
-                    atleta.Domicilio = (string)datos.Lector["Domicilio"];
+                    atleta.Email = (string)datos.Lector["Email"];
+                    atleta.Pass = (string)datos.Lector["Pass"];
                 }
                 return atleta;
             }
@@ -164,6 +166,140 @@ namespace negocio
                 datos.setearConsulta("UPDATE ATLETAS SET Pass = @Pass WHERE Email = @Email");
                 datos.setearParametro("@Pass", nuevo.Pass);
                 datos.setearParametro("@Email", nuevo.Email);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void agregarImagen (FotoPerfil nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Insert Into IMAGENES (IdAlumno, ImagenUrl) values (@IdAlumno,@ImagenUrl);");
+                datos.setearParametro("@IdAlumno", nuevo.IdAtleta);
+                datos.setearParametro("@ImagenUrl", nuevo.Url);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void imagenPerfil(FotoPerfil nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Select ImagenUrl From IMAGENES where IdAlumno = @IdAlumno");
+                datos.setearParametro("@IdAlumno", nuevo.IdAtleta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    nuevo.Url = (string)datos.Lector["ImagenUrl"];
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void actualizarImagen(FotoPerfil nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdAlumno = @IdAlumno");
+                datos.setearParametro("@IdAlumno", nuevo.IdAtleta);
+                datos.setearParametro("@ImagenUrl", nuevo.Url);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
+        public bool existeImagen(int idAtleta)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT ImagenUrl FROM IMAGENES WHERE IdAlumno = @IdAlumno");
+                datos.setearParametro("@IdAlumno", idAtleta);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    int count = (int)datos.Lector[0];
+                    return count > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void actualizarPerfilPublico(Atleta atleta)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ATLETAS SET Nombre = @Nombre,Apellido = @Apellido, FechaNacimiento = @FechaNacimiento, Sexo = @Sexo WHERE Id = @Id");
+                datos.setearParametro("@Id", atleta.Id);
+                datos.setearParametro("@Nombre", atleta.Nombre);
+                datos.setearParametro("Apellido", atleta.Apellido);
+                datos.setearParametro("@FechaNacimiento", atleta.FechaNacimiento);
+                datos.setearParametro("@Sexo", atleta.Sexo);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void actualizarPerfilPrivado(Atleta atleta)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ATLETAS SET Dni = @Dni,Domicilio = @Domicilio, Altura = @Altura, Peso = @Peso, Email=@Email WHERE Id = @Id;");
+                datos.setearParametro("@Id", atleta.Id);
+                datos.setearParametro("@Dni",atleta.Dni );
+                datos.setearParametro("@Domicilio", atleta.Domicilio);
+                datos.setearParametro("@Altura", atleta.Altura);
+                datos.setearParametro("@Peso", atleta.Peso);
+                datos.setearParametro("@Email", atleta.Email);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

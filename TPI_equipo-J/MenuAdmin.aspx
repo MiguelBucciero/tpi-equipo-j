@@ -103,7 +103,6 @@
                             <div class="profile-picture"></div>
                             <h3 class="mt-3" id="lblUserName" runat="server">Nombre del Usuario</h3>
                             <p>ADMISTRADOR</p>
-                            <div><span>0 Following</span> | <span>0 Followers</span> </div>
                         </div>
                     </div>
                     <!-- Mejores Marcas Section -->
