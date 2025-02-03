@@ -89,16 +89,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-area">
         <ul class="nav nav-tabs">
-    <li class="nav-item">
-        <asp:LinkButton ID="lnkDashboard" runat="server" CssClass="nav-link" OnClick="lnkDashboard_Click">Dashboard</asp:LinkButton>
-    </li>
-    <li class="nav-item">
-        <asp:LinkButton ID="lnkEntrenos" runat="server" CssClass="nav-link" OnClick="lnkEntrenos_Click">Entrenos</asp:LinkButton>
-    </li>
-    <li class="nav-item">
-        <asp:LinkButton ID="lnkPerfil" runat="server" CssClass="nav-link" OnClick="lnkPerfil_Click">Mi Perfil</asp:LinkButton>
-    </li>
-</ul>
+            <li class="nav-item">
+                <asp:LinkButton ID="lnkDashboard" runat="server" CssClass="nav-link" OnClick="lnkDashboard_Click">Dashboard</asp:LinkButton>
+            </li>
+            <li class="nav-item">
+                <asp:LinkButton ID="lnkEntrenos" runat="server" CssClass="nav-link" OnClick="lnkEntrenos_Click">Entrenos</asp:LinkButton>
+            </li>
+            <li class="nav-item">
+                <asp:LinkButton ID="lnkPerfil" runat="server" CssClass="nav-link" OnClick="lnkPerfil_Click">Mi Perfil</asp:LinkButton>
+            </li>
+            <li class="nav-item">
+                <asp:LinkButton ID="lnkAlumnos" runat="server" CssClass="nav-link" OnClick="lnkAlumnos_Click">Alumnos</asp:LinkButton>
+            </li>
+            <li class="nav-item">
+                <asp:LinkButton ID="lnkPermisos" runat="server" CssClass="nav-link" OnClick="lnkPermisos_Click">Permisos</asp:LinkButton>
+            </li>
+        </ul>
     </div>
 
     <div class="tab-content">
@@ -311,7 +317,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <br />
-                                    <br />                               
+                                    <br />
                                     <label for="dni">DNI</label>
                                     <asp:TextBox ID="TextDni" TextMode="Number" runat="server" CssClass="form-control" ClientIDMode="Static" Style="display: none;"></asp:TextBox>
                                     <p id="lblDNI" runat="server"></p>
@@ -343,6 +349,25 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Pestaña Alumnos -->
+        <div class="tab-pane fade" id="alumnos" runat="server" role="tabpanel" aria-labelledby="alumnos-tab">
+            <div class="container content-area">
+                <h3>Alumnos</h3>
+                <p>Contenido de Alumnos.</p>
+            </div>
+        </div>
+        <!-- Permisos -->
+        <div class="tab-pane fade" id="permisos" runat="server" role="tabpanel" aria-labelledby="permisos-tab">
+            <div class="container content-area">
+                <h3>Permisos</h3>
+                <p>Adminstracion de Permisos</p>
+
+                <asp:GridView runat="server" ID="dgvUsuarios">
+                </asp:GridView>
+                <!-- Contenido de Permisos a Entrenadores -->
             </div>
         </div>
     </div>

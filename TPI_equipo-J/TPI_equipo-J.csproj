@@ -67,8 +67,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="MenuAdmin.aspx" />
-    <Content Include="MenuEntrenador.aspx" />
     <Content Include="MenuUsuario.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
     <Content Include="RecuperarContraseñaPaso2.aspx" />
@@ -105,20 +103,6 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MenuAdmin.aspx.cs">
-      <DependentUpon>MenuAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MenuAdmin.aspx.designer.cs">
-      <DependentUpon>MenuAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MenuEntrenador.aspx.cs">
-      <DependentUpon>MenuEntrenador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MenuEntrenador.aspx.designer.cs">
-      <DependentUpon>MenuEntrenador.aspx</DependentUpon>
     </Compile>
     <Compile Include="MenuUsuario.aspx.cs">
       <DependentUpon>MenuUsuario.aspx</DependentUpon>

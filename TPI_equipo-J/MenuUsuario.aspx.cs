@@ -41,6 +41,24 @@ namespace TPI_equipo_J
                     imagenPerfil.ImageUrl = "~/Images/" + fotoPerfil.Url;
                     imgPerfil.ImageUrl = "~/Images/" + fotoPerfil.Url;
 
+                    if (atleta.TipoUsuario == TipoUsuario.NORMAL)
+                    {
+                        lnkAlumnos.Visible = false;
+                        lnkPermisos.Visible = false;
+                        alumnos.Visible = false;
+                        permisos.Visible = false;
+                    }
+                    else if (atleta.TipoUsuario == TipoUsuario.ADMIN)
+                    {
+                        dgvUsuarios.DataSource = (List<Atleta>)Session["Usuarios"];
+                        dgvUsuarios.DataBind();
+                    }
+                    else if (atleta.TipoUsuario == TipoUsuario.ENTRENADOR)
+                    {
+                        lnkPermisos.Visible = false;
+                        permisos.Visible = false;
+                    }
+                    
                     string pestañaActiva = Session["PestañaActiva"]?.ToString();
                     if (string.IsNullOrEmpty(pestañaActiva))
                     {
@@ -56,6 +74,8 @@ namespace TPI_equipo_J
             dashboard.Attributes["class"] = "tab-pane fade";
             entrenos.Attributes["class"] = "tab-pane fade";
             perfil.Attributes["class"] = "tab-pane fade";
+            alumnos.Attributes["class"] = "tab-pane fade";
+            permisos.Attributes["class"] = "tab-pane fade";
 
             switch (nombrePestaña)
             {
@@ -67,6 +87,12 @@ namespace TPI_equipo_J
                     break;
                 case "perfil":
                     perfil.Attributes["class"] += " show active";
+                    break;
+                case "alumnos":
+                    alumnos.Attributes["class"] += " show active"; 
+                    break;
+                case "permisos":
+                    permisos.Attributes["class"] += " show active"; 
                     break;
             }
 
@@ -265,6 +291,14 @@ namespace TPI_equipo_J
             PestañaActiva("perfil");
         }
 
+        protected void lnkAlumnos_Click(object sender, EventArgs e)
+        {
+            PestañaActiva("alumnos");
+        }
 
+        protected void lnkPermisos_Click(object sender, EventArgs e)
+        {
+            PestañaActiva("permisos");
+        }
     }
 }

@@ -32,18 +32,7 @@ namespace TPI_equipo_J
                 if (negocio.Loguear(atleta))
                 {
                     Session.Add("usuario", atleta);
-                    if (atleta.TipoUsuario == TipoUsuario.NORMAL)
-                    {
-                        Response.Redirect("MenuUsuario.aspx", false);
-                    }
-                    else if(atleta.TipoUsuario == TipoUsuario.ADMIN)
-                    {
-                        Response.Redirect("MenuAdmin.aspx", false);
-                    }
-                    else if(atleta.TipoUsuario== TipoUsuario.ENTRENADOR)
-                    {
-                        Response.Redirect("MenuEntrenador.aspx", false);
-                    }
+                    Response.Redirect("MenuUsuario.aspx", false);
                 }
                 else
                 {
